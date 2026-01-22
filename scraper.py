@@ -14,7 +14,7 @@ def scrape():
 
     sp_data = []
     j = 0
-    links = links[:200]                                                             # Change this to adjust how many links to go to and fetch data
+    links = links[:250]                                                             # Change this to adjust how many links to go to and fetch data
     for examp in links:
         examp = BeautifulSoup(requests.get(examp).text, 'html5lib')
         sp_table = examp.find_all('table')[-1]
